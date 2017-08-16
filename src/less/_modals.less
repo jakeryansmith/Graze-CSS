@@ -1,0 +1,225 @@
+.gc-modal-mask {
+  position: fixed;
+  z-index: @zindex-modal;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(165, 1%, 1%, 0.7);
+  transition: all .3s ease;
+  opacity: 0;
+}
+
+.gc-modal-wrapper {
+	height: 100%;
+	display: block;
+	overflow: auto;
+	z-index: @zindex-modal + 1;
+}
+
+.gc-modal-container {
+  	margin: auto;
+  	margin-top: 2rem;
+  	background-color: #FFF;
+  	.br-sm();
+  	.shadow();
+  	transition: all .3s ease;
+  	transform: scale(0);
+  	animation: pop 0.3s linear 1;
+  	width: 600px;
+}
+
+
+.gc-modal-header {
+  margin-top: 0;
+  font-weight: bolder;
+  font-size: @font-size-1;
+  background-color: @gray-lighter;
+  padding: @spacing-medium @spacing-medium-small;
+  border-bottom: solid 1px @gray-light;
+  margin-bottom: @spacing-extra-small;
+  .br-sm();
+  .br--t();
+  +.gc-modal-body {
+  	padding: @spacing-medium-small @spacing-medium-small @spacing-medium-small @spacing-medium-small;
+  }
+}
+
+.gc-modal-body {
+	font-size: @font-size-normal;
+	padding: @spacing-large @spacing-medium-small @spacing-medium-small @spacing-medium-small;
+}
+
+.gc-modal-footer {
+    text-align: right;
+    border-top: solid 1px @gray-lighter;
+    padding: @spacing-medium-small @spacing-medium-small @spacing-medium-small @spacing-medium-small;
+}
+
+.gc-modal-enter {
+	opacity: 1;
+	.gc-modal-container {
+		transform: scale(1);
+	}
+}
+
+
+@keyframes pop {
+  50%  {transform: scale(1.2);}
+}
+
+.gc-modal {
+	display: none;
+}
+
+.gc-modal-show {
+	display: block;
+}
+
+// Depricated Modal
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: @zindex-modal;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+
+  &.fade .modal-dialog {
+    transform: translate(0, -25%);
+    transition: transform 0.3s ease-out;
+  }
+  &.in .modal-dialog { transform: translate(0, 0) }
+}
+
+.modal.fade .modal-dialog {
+    -webkit-transform: scale(0.1);
+    -moz-transform: scale(0.1);
+    -ms-transform: scale(0.1);
+    transform: scale(0.1);
+    top: 300px;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.modal.fade.in .modal-dialog {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform: translate3d(0, -300px, 0);
+    transform: translate3d(0, -300px, 0);
+    opacity: 1;
+}
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+}
+
+// Actual modal
+.modal-content {
+	background-color: transparent;
+	position: relative;
+	background-clip: padding-box;
+	outline: 0;
+	min-width: 400px;
+	max-width: 800px;
+	margin: @spacing-extra-large auto;
+	.shadow();
+	.br-md();
+}
+
+// Modal background
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: @zindex-modal-background;
+  background-color: hsla(0,0,0,0.5);
+  &.fade { opacity: 0.5; }
+  &.in { opacity: 0.5; }
+}
+
+// Modal header
+// Top section of the modal w/ title and dismiss
+.modal-header {
+  padding: @spacing-medium;
+  background-color: @gray-lighter;
+  color: @gray;
+  border-bottom: 1px solid @gray-light;
+  .br-md();
+  .br--t();
+}
+// Close icon
+.modal-header .close {
+  margin-top: -2px;
+}
+
+// Title text within header
+.modal-title {
+  margin: 0;
+  line-height: 1rem;
+  font-weight: bold;
+  font-size: @font-size-normal;
+}
+
+// Modal body
+.modal-body {
+  position: relative;
+  padding: @spacing-medium-small;
+  background-color: #FFF;
+}
+
+// Footer (for actions)
+.modal-footer {
+  background-color: @gray-lighter;
+  .br-md();
+  .br--b();
+  padding: @spacing-small;
+  text-align: right; // right align buttons
+  border-top: 1px solid @gray-light;
+
+  // Properly space out buttons
+  .btn + .btn {
+    margin-left: @spacing-small;
+    margin-bottom: 0;
+  }
+}
+
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+.modal-sm {
+	max-width: 400px;
+}
+
+.modal-lg {
+	max-width: 800px;
+}

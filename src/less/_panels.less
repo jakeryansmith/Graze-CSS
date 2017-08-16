@@ -1,0 +1,89 @@
+.panel {
+	margin-bottom: @spacing-large;
+	background-color: #FFF;
+	border-color: #FFF;
+	.br-sm();
+	.shadow();
+}
+
+.panel-tabs {
+  .br--b();
+}
+
+.panel-body {
+  padding: @spacing-medium-small @spacing-medium;
+  overflow: auto;
+}
+
+.panel-footer {
+  padding: @spacing-medium-small @spacing-medium;
+  border-top: solid 1px @gray-lighter;
+}
+
+.panel-heading {
+  font-weight: bold;
+  font-size: @font-size-1;
+  padding: @spacing-medium-small @spacing-medium;
+  border-bottom: solid 1px @gray-light;
+  color: @gray;
+  background-color: #FFF;
+  .br-sm();
+  .br--t();
+  a {
+  	font-size: @font-size-normal;
+  	color: @gray;
+  }
+}
+
+.panel {
+  > .list-group,
+  > .panel-collapse > .list-group {
+    margin-bottom: 0;
+
+    .list-group-item {
+      border-width: 1px 0;
+      border-radius: 0;
+    }
+
+    // Add border top radius for first one
+    &:first-child {
+      .list-group-item:first-child {
+        border-top: 0;
+
+      }
+    }
+    // Add border bottom radius for last one
+    &:last-child {
+      .list-group-item:last-child {
+        border-bottom: 0;
+
+      }
+    }
+  }
+}
+// Collapse space between when there's no additional content.
+.panel-heading + .list-group {
+  .list-group-item:first-child {
+    border-top-width: 0;
+  }
+}
+.list-group + .panel-footer {
+  border-top-width: 0;
+}
+
+// Styles
+.panel-success, .panel-info {
+	.panel-heading {
+		background-color: @primary;
+		border-color: @primary;
+		color: #FFF;
+	}
+}
+
+.panel-warning, .panel-danger {
+	.panel-heading {
+		background-color: @warning-light;
+		border-color: @warning-light;
+		color: #FFF;
+	}
+}

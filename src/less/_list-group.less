@@ -1,0 +1,43 @@
+.list-group {
+  margin: 0;
+  paddng: 0;
+  .br-sm();
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: @spacing-medium-small @spacing-medium;
+  background-color: #FFF;
+  border-bottom: 1px solid @gray-light;
+  transition: all ease-in-out 0.15s;
+  color: @gray;
+
+  // Round the first and last items
+  &:first-child {
+    .br-sm();
+    .br--t();
+  }
+  &:last-child {
+    .br-sm();
+    .br--b();
+    border-bottom: 0;
+  }
+}
+
+a.list-group-item {
+  color: @gray;
+}
+
+a.list-group-item.active {
+  color: @primary;
+  background-color: @gray-lighter;
+}
+
+a.list-group-item {
+  &:hover {
+    color: @primary;
+    background-color: @gray-lighter;
+    padding-left: @spacing-medium + 0.25rem;
+  }
+}

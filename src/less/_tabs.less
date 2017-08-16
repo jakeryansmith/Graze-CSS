@@ -1,0 +1,38 @@
+.nav {
+	display: flex;
+	align-items: center;
+	> li {
+		flex: 0 1 auto;
+		margin-bottom: -1px;
+	}
+	> li > a {
+		display: inline-block;
+		padding: @spacing-medium-small @spacing-medium;
+		font-size: @font-size-normal;
+		color: @gray;
+		border-bottom: solid 2px transparent;
+		background-color: transparent;
+		border-radius: @border-radius-small;
+		.br--t();
+		margin-right: @spacing-extra-small;
+		transition: all ease-in-out 0.15s;
+		&:hover, &:focus {
+			border-bottom: solid 2px transparent;
+			color: @primary;
+		}
+	}
+	> li.active > a {
+		color: @primary;
+		font-weight: bolder;
+		border-color: @gray-light;
+		background-color: transparent;
+		border-bottom: solid 2px @primary;
+	}
+	> li.divider {
+		width: 1px;
+		height: 1rem;
+		background-color: @gray-light;
+		margin-left: @spacing-medium-small;
+		margin-right: @spacing-medium-small;
+	}
+}

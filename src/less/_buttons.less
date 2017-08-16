@@ -1,0 +1,144 @@
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: @font-size-normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: @border-radius-extra-small;
+  white-space: nowrap;
+  max-height: @input-height;
+  line-height: 1rem;
+  padding: @spacing-small @spacing-medium-small;
+  user-select: none;
+  transition: all ease-in-out 0.15s;
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.75;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-sm {
+  height: auto;
+  line-height: auto;
+  padding: @spacing-extra-small @spacing-small;
+  font-size: @font-size-small;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+/* Button Styles */
+
+.btn-alt, .btn-secondary {
+  border-color: transparent;
+  background-color: transparent;
+  color: @gray;
+    &:hover, &:focus {
+    color: @gray-dark;
+  }
+}
+
+.btn-light, .btn-primary, .btn-default, .btn-success {
+  border-color: @gray-light;
+  background-color: @gray-lighter;
+  color: @gray;
+  &:hover, &:focus {
+    border-color: @gray;
+    background-color: @gray;
+    color: #FFF;
+    .shadow();
+  }
+}
+
+.btn-action, {
+  border-color: @primary;
+  background-color: @primary;
+  color: #FFF;
+  &:hover, &:focus {
+    border-color: @primary-dark;
+    background-color: @primary-dark;
+    color: #FFF;
+    .shadow();
+  }
+}
+
+.btn-danger {
+  border-color: @warning;
+  background-color: @warning;
+  color: #FFF;
+  &:hover, &:focus {
+    border-color: @warning-dark;
+    background-color: @warning-dark;
+    color: #FFF;
+    .shadow();
+  }
+}
+
+.btn-group {
+  display: inline-flex;
+  position: relative;
+}
+
+.btn-group {
+  .btn + .btn,
+  .btn + .btn-group,
+  .btn-group + .btn,
+  .btn-group + .btn-group {
+    margin-left: -1px;
+  }
+}
+
+.btn-group > .btn:first-child {
+  .br--l();
+}
+
+.btn-group > .btn:last-child {
+  .br--r();
+}
+
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  border-radius: 0;
+}
+
+// Close button
+.close {
+  float: right;
+  font-size: @font-size-2;
+  font-weight: bold;
+  line-height: 1rem;
+  color: @gray;
+
+  &:hover,
+  &:focus {
+    color: @primary;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  button& {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+  }
+}

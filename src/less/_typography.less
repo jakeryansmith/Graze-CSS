@@ -1,0 +1,45 @@
+h1, h2, h3, h4, h5, h6, {
+  font-family: @font-stack;
+  font-weight: bolder;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+
+  small,
+  .small {
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+h1 { font-size: @font-size-5; }
+h2 { font-size: @font-size-4; }
+h3 { font-size: @font-size-3; }
+h4 { font-size: @font-size-2; }
+h5 { font-size: @font-size-normal; }
+h6 { font-size: @font-size-normal; }
+
+p {
+  margin: 0 0 @spacing-medium 0;
+}
+
+small,
+.small {
+  font-size: @font-size-small;
+}
+
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+.text-gray {color: @gray;}
+.text-gray-light, .text-muted {color: @gray-light;}
+.text-gray-lighter {color: @gray-lighter;}
+
+.text-primary {color: @primary;}
+.text-primary-light {color: @primary-light;}
+.text-success {color: @primary;}
+
+.text-warning, .text-danger {color: @warning;}

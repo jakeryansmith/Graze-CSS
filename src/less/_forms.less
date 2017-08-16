@@ -1,0 +1,63 @@
+label {
+  display: inline-block;
+  font-size: @font-size-normal;
+  font-weight: bold;
+  margin-bottom: @spacing-extra-small;
+}
+
+.checkbox, .radio {
+  label {
+    font-weight: normal; 
+    margin-top: @spacing-extra-small;
+  }
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: @spacing-extra-small @spacing-extra-small 0 0;
+  line-height: normal;
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: @input-height;
+  padding: @spacing-extra-small @spacing-small;
+  font-size: @font-size-normal;
+  vertical-align: middle;
+  line-height: @input-height;
+  color: @gray;
+  background-color: #FFF;
+  background-image: none;
+  border: 1px solid @gray-light;
+  border-radius: @border-radius-small;
+  &::-moz-placeholder {
+    color: @gray-medium;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder { color: @gray-medium; }
+  &::-webkit-input-placeholder  { color: @gray-medium; }
+  &[disabled],
+  &[readonly] {
+    background-color: @gray-lighter;
+    opacity: 1;
+  }
+
+  &[disabled] {cursor: not-allowed;}
+
+  textarea& {
+    max-height: auto;
+    height: auto;
+    line-height: 1rem;
+    padding: @spacing-small @spacing-small;
+  }
+}
+
+.form-group {
+  margin-bottom: @spacing-medium;
+}

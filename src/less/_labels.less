@@ -1,0 +1,40 @@
+.label {
+  display: inline;
+  padding: @spacing-extra-extra-small @spacing-extra-small;
+  font-size: @font-size-small;
+  font-weight: bold;
+  line-height: 1rem;
+  color: #FFF;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: @border-radius-extra-small;
+
+  a& {
+    &:hover,
+    &:focus {
+      color: #FFF;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  &:empty {
+    display: none;
+  }
+}
+
+.label-light {
+  background-color: @gray-light;
+  color: @gray-medium;
+}
+
+.label-default, .label-primary, .label-success {
+  background-color: @primary;
+  color: #FFF;
+}
+
+.label-danger {
+  background-color: @warning;
+  color: #FFF;
+}

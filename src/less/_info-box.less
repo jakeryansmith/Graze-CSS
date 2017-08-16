@@ -1,0 +1,37 @@
+.info-boxes {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: @spacing-large;
+  > li {
+    flex: 1 1 auto;
+    color: @gray;
+    font-size: @font-size-normal;
+    margin-right: @spacing-medium;
+    background-color: #FFF;
+    border: 1px solid transparent;
+    .br-sm();
+    .shadow();
+    padding: @spacing-medium-small @spacing-medium;
+    align-items: stretch;
+    .info-box-heading {
+      color: @gray;
+      font-size: @font-size-1;
+      display: block;
+      margin-bottom: @spacing-small;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  .info-hide {
+    display: none;
+  }
+
+  .show-hidden-info {
+    .info-hide {
+      display: block;
+    }
+  }
+}
