@@ -6,6 +6,10 @@ html, body, #app {
     height: 100%;
 }
 
+html {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
 body {
 	color: @body-text;
 	font-family: @font-stack;
@@ -17,9 +21,6 @@ ul, ol {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
-  > li {
-    margin-bottom: @spacing-extra-small;
-  }
 }
 
 input,

@@ -11,7 +11,7 @@
   border: 1px solid transparent;
   border-radius: @border-radius-extra-small;
   white-space: nowrap;
-  max-height: @input-height;
+  min-height: @input-height;
   line-height: 1rem;
   padding: @spacing-small @spacing-medium-small;
   user-select: none;
@@ -29,9 +29,10 @@
 
 .btn-sm {
   height: auto;
+  min-height: auto;
   line-height: auto;
   padding: @spacing-extra-small @spacing-small;
-  font-size: @font-size-small;
+  font-size: @font-size-small !important;
 }
 
 .btn-block {
@@ -118,6 +119,18 @@ input[type="button"] {
 
 .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0;
+}
+
+.btn-active {
+  color: @gray-dark;
+}
+
+.btn-not-active {
+  color: @gray-medium;
+}
+
+.btn:focus:not(:active) {
+  animation: pop 0.2s ease-out 1;
 }
 
 // Close button

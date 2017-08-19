@@ -9,6 +9,7 @@
 	border-top: solid 6px @primary;
 	.shadow();
 	transition: all 0.3s ease-in-out;
+	display: table;
 }
 
 .systemNotification--success {
@@ -22,18 +23,17 @@
 .systemNotification__inner-container {
 	position: relative;
 	text-align: center;
-	padding: 10px 75px;
-	font-size: 18px;
+	padding: @spacing-medium @spacing-small;
+	font-size: @font-size-1;
 	color: @gray;
 	font-weight: bold;
-	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	min-height: 130px;
+	display: table-cell;
+	vertical-align: middle;
+  	height: 100%;
 }
 
 .systemNotification__message {
-	flex: 1 auto auto;
+	flex: 1 0 auto;
 }
 
 .systemNotification__close {
@@ -45,14 +45,15 @@
 	border-radius: 50px;
 	background-color: transparent;
 	line-height: 50px;
-	font-size: 50px;
+	font-size: @font-size-4 !important;
 	text-align: center;
 	color: @gray;
+	transition: all ease-in-out 0.2s;
 }
 
 .systemNotification__close:hover {
-	background-color: @gray-lighter;
-	color: @gray;
+	background-color: @gray-light;
+	color: @gray-dark;
 	text-decoration: none;
 }
 

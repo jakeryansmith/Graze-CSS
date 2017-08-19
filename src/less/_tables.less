@@ -57,7 +57,7 @@ th {
 // Default zebra-stripe styles (alternating gray and transparent backgrounds)
 
 .table-striped {
-  > tbody > tr:nth-of-type(odd) {
+  > tbody > tr:nth-of-type(even) {
     background-color: @table-accent-color;
   }
 }
@@ -80,6 +80,12 @@ th {
 // Settings table
 .table-settings {
   background-color: #ffffff;
+  > tbody > tr > td {
+    padding: @spacing-medium-small @spacing-medium;
+  }
+  > tbody > tr:first-child td {
+    border-top: 0; // Hide the border on the first row.
+  }
 }
 
 .table-settings > tbody > tr > td {
@@ -91,6 +97,8 @@ th {
     margin: @spacing-extra-small 0;
   }
   p {
-    font-size: 12px;
+    font-size: @font-size-small;
+    line-height: 1.1rem;
+    color: @gray-medium;
   }
 }  

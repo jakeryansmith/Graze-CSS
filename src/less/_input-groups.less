@@ -1,5 +1,6 @@
 .input-group-append {
 	display: flex;
+	
 	.form-control {
 		flex: 1 1 auto;
 		border-radius: 0 3px 3px 0;
@@ -24,8 +25,13 @@
 .input-group {
 	display: flex;
 	align-items: center;
+	position: relative;
+	.validation-text {
+		position: absolute;
+		top: 100%;
+	}
 	.form-control {
-		flex: 1 1 auto;
+		flex: 1 auto auto;
 		.br--l();
 		.br--r();
 	}

@@ -9,7 +9,7 @@
 .br-0 {border-radius: @border-radius-none;}
 .br-xs {border-radius: @border-radius-extra-small;}
 .br-sm {border-radius: @border-radius-small;}
-.br-md {border-radius: @border-radius-medium;}
+.br-md {border-radius: @border-radius-medium !important;}
 .br-lg {border-radius: @border-radius-large;}
 .br-round {border-radius: @border-radius-round;}
 
@@ -49,6 +49,10 @@
 }
 
 .border {border: solid 1px @border-color;}
+
+.border-light {
+	border-color: @gray-lighter;
+}
 
 .border-b {
 	border-top: none;

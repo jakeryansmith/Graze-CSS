@@ -23,10 +23,22 @@
   	background-color: #FFF;
   	.br-sm();
   	.shadow();
-  	transition: all .3s ease;
-  	transform: scale(0);
-  	animation: pop 0.3s linear 1;
-  	width: 600px;
+  	transition: all .1s ease;
+    opacity: .5;
+  	max-width: 600px;
+}
+
+.gc-modal-container--large {
+  max-width: 800px;
+}
+
+.gc-modal-container--full {
+  width: 100%;
+  min-height: 100%;
+  margin-top: 0;
+  .br-0();
+  animation: none;
+  transition: all .2s ease;
 }
 
 
@@ -46,6 +58,7 @@
 }
 
 .gc-modal-body {
+  line-height: 1.25rem;
 	font-size: @font-size-normal;
 	padding: @spacing-large @spacing-medium-small @spacing-medium-small @spacing-medium-small;
 }
@@ -59,13 +72,9 @@
 .gc-modal-enter {
 	opacity: 1;
 	.gc-modal-container {
-		transform: scale(1);
+    opacity: 1;
+    animation: pop 0.4s ease-out 1;
 	}
-}
-
-
-@keyframes pop {
-  50%  {transform: scale(1.2);}
 }
 
 .gc-modal {

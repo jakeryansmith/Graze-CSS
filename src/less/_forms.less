@@ -3,6 +3,12 @@ label {
   font-size: @font-size-normal;
   font-weight: bold;
   margin-bottom: @spacing-extra-small;
+  .label-context {
+    display: block;
+    color: @gray-medium-light;
+    font-weight: normal;
+    font-size: @font-size-small;
+  }
 }
 
 .checkbox, .radio {
@@ -18,30 +24,40 @@ input[type="checkbox"] {
   line-height: normal;
 }
 
+input[type="range"] {
+  display: block;
+}
+
 select[multiple],
 select[size] {
   height: auto;
+}
+
+select::-ms-expand {
+    background-color: transparent;
+    border: none;
+    color: @gray;
 }
 
 .form-control {
   display: block;
   width: 100%;
   height: @input-height;
-  padding: @spacing-extra-small @spacing-small;
+  padding: 0 @spacing-small;
   font-size: @font-size-normal;
   vertical-align: middle;
-  line-height: @input-height;
+  line-height: auto;
   color: @gray;
   background-color: #FFF;
   background-image: none;
   border: 1px solid @gray-light;
   border-radius: @border-radius-small;
   &::-moz-placeholder {
-    color: @gray-medium;
+    color: @gray-light;
     opacity: 1;
   }
-  &:-ms-input-placeholder { color: @gray-medium; }
-  &::-webkit-input-placeholder  { color: @gray-medium; }
+  &:-ms-input-placeholder { color: @gray-light; }
+  &::-webkit-input-placeholder  { color: @gray-light; }
   &[disabled],
   &[readonly] {
     background-color: @gray-lighter;
@@ -56,6 +72,17 @@ select[size] {
     line-height: 1rem;
     padding: @spacing-small @spacing-small;
   }
+}
+
+.validation-error {
+  border-color: @warning;
+}
+
+.validation-text {
+  display: block;
+  font-size: @font-size-small;
+  font-weight: lighter;
+  color: @warning;
 }
 
 .form-group {
