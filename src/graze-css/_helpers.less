@@ -1,0 +1,36 @@
+.block {display: block;}
+.relative {position: relative;}
+.absolute {position: absolute;}
+.hidden, .hide {display: none !important;}
+.show {display: block !important;}
+.center {margin-left: auto; margin-right: auto;}
+.draggable:hover {cursor: move;}
+[v-cloak] {display: none;}
+.truncate {
+  display: block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.overflow-auto {overflow: auto;}
+.overflow-x {overflow: overflow-x;}
+.overflow-y {overflow: overflow-y;}
+.overflow-h {overflow: hidden;}
+.overflow-n {overflow: normal !important;}
+._0 {display: none !important;}
+.__1 {display: none !important;}
+._1 {display: inline-block !important;}
+.bg-white {background-color: #FFF;}
+
+@media (max-width: @mobile-table-break) {
+	.hide-mobile {
+		display: none !important;
+	}
+	.visible-mobile {
+		display: block !important;
+	}
+	.visible-mobile-inline {
+		display: inline-block !important;
+	}
+}	

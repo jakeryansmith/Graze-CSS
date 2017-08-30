@@ -1,0 +1,168 @@
+label {
+  display: inline-block;
+  font-size: @font-size-normal;
+  font-weight: bold;
+  margin-bottom: @spacing-extra-small;
+  .label-context {
+    display: block;
+    color: @gray-medium-light;
+    font-weight: normal;
+    font-size: @font-size-small;
+  }
+}
+
+.checkbox, .radio {
+  label {
+    font-weight: normal; 
+    margin-top: @spacing-extra-small;
+  }
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: @spacing-extra-small @spacing-extra-small 0 0;
+  line-height: normal;
+}
+
+input[type="range"] {
+  display: block;
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+select::-ms-expand {
+    background-color: transparent;
+    border: none;
+    color: @gray;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: @input-height;
+  padding: 0 @spacing-small;
+  font-size: @font-size-normal;
+  vertical-align: middle;
+  line-height: auto;
+  color: @gray;
+  background-color: #FFF;
+  background-image: none;
+  border: 1px solid @gray-light;
+  border-radius: @border-radius-small;
+  &::-moz-placeholder {
+    color: @gray-light;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder { color: @gray-light; }
+  &::-webkit-input-placeholder  { color: @gray-light; }
+  &[disabled],
+  &[readonly] {
+    background-color: @gray-lighter;
+    opacity: 1;
+  }
+
+  &[disabled] {cursor: not-allowed;}
+
+  textarea& {
+    max-height: auto;
+    height: auto;
+    line-height: 1rem;
+    padding: @spacing-small @spacing-small;
+  }
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+// Input sizes
+.input-sm {max-width: 100px; min-width: 45px;}
+
+// Hide number spinners
+.hide-spinners {
+  &::-webkit-inner-spin-button, 
+  &::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+  -moz-appearance:textfield;
+  margin: 0;
+  }
+}
+
+// Validation
+
+.validation-error {
+  border-color: @warning;
+}
+
+.validation-text {
+  display: block;
+  font-size: @font-size-small;
+  font-weight: lighter;
+  color: @warning;
+}
+
+// Helpers
+.form-group {margin-bottom: @spacing-medium;}
+
+// Hidden input
+.hiddenInput {
+  background-color: transparent;
+  border: 0;
+  color: @gray;
+  line-height: auto;
+  display: inline-block;
+  width: 36px;
+  text-align: right;
+}
+
+// Custom Select (Used on collection component)
+.select {
+  position: relative;
+  margin-bottom: @spacing-medium;
+  .select-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: @zindex-dropdown;
+    min-width: 160px;
+    max-width: 100%;
+    width: 100%;
+    padding: 5px;
+    list-style: none;
+    font-size: @font-size-small;
+    background-color: rgba(255,255,255,0.95);
+    .shadow();
+    background-clip: padding-box;
+    max-height: 300px;
+    overflow: scroll;
+
+    > li > span {
+      padding: @spacing-small @spacing-medium;
+      display: block;
+      width: 100%;
+
+      .fa-check-circle-o {
+        color: @primary;
+      }
+
+      .fa-circle-o {
+        color: #fff;
+        visibility: hidden;
+      }
+    }
+
+    > li > span:hover {
+      background-color: @primary;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+
+      .fa-check-circle-o {
+        color: #fff;
+      }
+    }
+  }
+}

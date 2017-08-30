@@ -1,0 +1,78 @@
+.dropup,
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 99999;
+  transition: all 0.1s ease-in-out;
+  transform: scale(0, 0);
+  transform-origin: 0% 0%;
+  opacity: 0;
+  float: left;
+  min-width: 160px;
+  padding: 0;
+  font-size: @font-size-normal;
+  text-align: left;
+  background-color: rgba(255,255,255,0.98);
+  background-clip: padding-box;
+  .shadow();
+
+  &.pull-right {
+    right: 0;
+    left: auto;
+    transform-origin: 100% 0%;
+  }
+
+  .divider {
+  	height: 1px;
+  	margin: @spacing-extra-small;
+  	overflow: hidden;
+  	background-color: @gray-lighter;
+  }
+
+  > li > a {
+    display: block;
+    padding: @spacing-medium @spacing-medium;
+    clear: both;
+    font-weight: normal;
+    line-height: 1rem;
+    color: @gray;
+    transition: all ease-in-out 0.1s;
+    white-space: nowrap;
+    &:hover {
+    	background-color: @gray;
+    	color: #FFF;
+    }
+  }
+}
+
+.open {
+  > .dropdown-menu {
+    display: block !important;
+    transform: scale(1, 1);
+    opacity: 100;
+  }
+  > a {
+    outline: 0;
+  }
+}
+
+
+.dropdown-menu.daterangepicker {
+  display: none;
+  transform: scale(1, 1);
+  opacity: 100;
+}
+
+.dropdown-backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: (99999 - 10);
+}

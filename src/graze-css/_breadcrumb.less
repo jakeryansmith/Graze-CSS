@@ -1,0 +1,23 @@
+.breadcrumb-toolbar, .breadcrumb {
+  > li {
+    line-height: 1;
+    font-size: @font-size-2;
+    display: inline-block;
+    a:hover {color: @primary-dark;}
+    + li:before {
+      content: "/\00a0";
+      padding: 0 @spacing-extra-small;
+    }
+  }
+}
+
+@media (max-width: @mobile-table-break) {
+	.breadcrumb-toolbar, .breadcrumb {
+	  > li {
+	    font-size: @font-size-normal;
+	    + li:before {
+	      padding: 0 0;
+	    }
+	  }
+	}
+}

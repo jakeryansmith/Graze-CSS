@@ -1,0 +1,256 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: #FFF;
+}
+
+th {
+  text-align: left;
+}
+
+
+// Baseline styles
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  font-size: @font-size-normal;
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th, > td {
+        padding: @spacing-small;
+        vertical-align: middle;
+        border-top: 1px solid @table-border-color;
+      }
+    }
+  }
+  // Bottom align for column headings
+  > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 1px solid @table-border-color;
+    background-color: #FFF;
+  }
+  // Remove top border from thead by default
+  > caption + thead,
+  > colgroup + thead,
+  > thead:first-child {
+    > tr:first-child {
+      > th,
+      > td {
+        border-top: 0;
+      }
+    }
+  }
+  // Account for multiple tbody instances
+  > tbody + tbody {
+    border-top: 2px solid @table-border-color;
+  }
+}
+
+.table-full {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th, > td {
+        padding: @spacing-small @spacing-medium !important;
+        // border-right: solid 1px @gray-light;
+        // &:last-of-type {border-right: none;}
+      }
+    }
+  }
+  > thead > tr > th {padding: @spacing-medium @spacing-medium !important;}
+}
+
+// Zebra-striping
+//
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+
+.table-striped {
+  > tbody > tr:nth-of-type(even) {
+    background-color: @table-accent-color;
+  }
+}
+
+.table-hover {
+  tbody > tr:hover {
+    background-color: @table-hightlight-color !important;
+  }
+}
+
+.table-summary {
+  td {
+    font-size: @font-size-1;
+    padding: @spacing-small 0;
+  }
+
+  tr:first-of-type {
+    td {
+      padding: 0 0 @spacing-small 0;
+    }
+  }
+
+  tr {
+    border-bottom: solid 1px @gray-lighter;
+  }
+  
+  tr:last-of-type {
+    border-bottom: none;
+    td {
+      font-size: @font-size-2;
+      font-weight: bolder;
+      padding: @spacing-small 0 0 0;
+    }
+  }
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar !important;
+}
+
+// Settings table
+.table-settings {
+  background-color: #ffffff;
+  > tbody > tr > td {
+    padding: @spacing-medium-small @spacing-medium;
+  }
+  > tbody > tr:first-child td {
+    border-top: 0; // Hide the border on the first row.
+  }
+}
+
+.table-settings > tbody > tr > td {
+  vertical-align: middle !important;
+  width: 50%;
+  h2 {
+    font-size: @font-size-normal;
+    font-weight: bolder;
+    margin: @spacing-extra-small 0;
+  }
+  p {
+    font-size: @font-size-small;
+    line-height: 1.1rem;
+    color: @gray-medium;
+  }
+}
+
+@media screen and (max-width: @mobile-table-break) {
+  .table-settings > tbody > tr > td {
+    width: 100%;
+    display: block;
+    border: none;
+    &:first-of-type {
+      padding-bottom: 0;
+    }
+    &:last-of-type {
+      padding-top: @spacing-small;
+      padding-bottom: @spacing-medium;
+      border-bottom: solid 1px @gray-light;
+    }
+    h2 {
+      font-size: @font-size-1;
+      font-weight: bolder;
+      margin: @spacing-extra-small 0;
+    }
+    p {
+      font-size: @font-size-normal;
+      line-height: 1.1rem;
+      color: @gray-medium;
+    }
+  }
+  .table-settings > tbody > tr:last-of-type > td {
+    border-bottom: none;
+  }
+  .table-compact {
+    thead {display: none;}
+
+    tbody > tr {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      border-top: solid @gray-light 1px;
+      &:first-of-type {border: 0;}
+    }
+    tbody > tr > td:first-of-type {
+      display: block;
+      flex: 1 0 100%;
+    }
+    tbody > tr > td {
+      display: inline-block;
+      flex: 1 1 auto;
+    }
+    tbody > tr > td {
+      border: 0 !important;
+    }
+  }
+
+  // Table list presents table data in a format that works well on mobile
+  .table-list {
+    thead {display: none;}
+    tbody, tr, td {display: block; border: none !important; width: 100%;}
+    tr > td:first-of-type {
+      padding-top: @spacing-medium !important;
+    }
+    tr > td:last-of-type {
+      padding-bottom: @spacing-medium !important;
+      border-bottom: solid 2px @gray-light !important;
+    }
+    tr:last-of-type td {
+      border-bottom: none !important;
+    }
+    td[data-label]:before {
+      font-weight: bolder;
+      display: inline-block;
+      margin-right: @spacing-extra-small;
+      margin-bottom: @spacing-extra-small;
+      content: attr(data-label)":";
+    }
+  }
+}
+
+@media print {
+  .table {
+    a {
+      text-decoration: none !important;
+    }
+    a[href]:after {
+        content: none !important;
+    }
+
+    abbr[title]:after {
+        content: none !important;
+    }
+  }
+}  
+
+.highlight-first-row tr:first-of-type {
+  background-color: @gray-light;
+  font-weight: bold;
+}
+
+.table-header {
+  background-color: @gray-lighter;
+  color: @gray-medium;
+  font-weight: bolder;
+  text-align: center;
+  border: dashed 2px @gray-light;
+  border-top: dashed 2px @gray-light !important;
+}
+
+.table-column-highlight-left {
+  border-left: dashed 2px #ddd;
+}
+
+.table-column-highlight-right {
+  border-right: dashed 2px #ddd;
+}
+
+.tableSorter {
+  white-space: nowrap;
+}

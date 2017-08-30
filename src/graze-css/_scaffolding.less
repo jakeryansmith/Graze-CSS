@@ -1,0 +1,55 @@
+html, body {
+	font-size: 16px;
+}
+
+html, body, #app {
+    height: 100%;
+}
+
+html {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+body {
+	color: @body-text;
+	font-family: @font-stack;
+	background-color: #f5f8f9;
+}
+
+ul, ol {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a {
+  color: @link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: @link-color-hover;
+    text-decoration: none;
+  }
+}
+
+img {
+	max-width: 100%;
+  height: auto;
+}
+
+hr {
+  margin-top: @spacing-medium;
+  margin-bottom: @spacing-medium;
+  border: 0;
+  border-top: 1px solid @gray-light;
+}

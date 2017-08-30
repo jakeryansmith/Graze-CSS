@@ -1,0 +1,200 @@
+/* GrazeCart Green */
+/* Font Sizes */
+.emailTemplateEditor {
+  height: 100%;
+  padding-top: 63px;
+}
+.emailTemplateEditor__header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  max-height: 63px;
+  z-index: 200;
+}
+.emailTemplateEditor__body {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  z-index: 100;
+}
+.emailTemplateEditor__previewContainer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  height: 100%;
+  overflow: auto;
+  padding: 10px;
+}
+.emailTemplateEditor__previewContainer iframe,
+.emailTemplateEditor__previewContainer img {
+  max-width: 100% !important;
+}
+.emailTemplateEditor__previewContainer table {
+  width: 100% !important;
+}
+.emailTemplateEditor__previewContainer .segment--dragged {
+  width: 100%;
+  height: 200px;
+  border: solid 2px rgba(0, 0, 0, 0.6);
+}
+.emailTemplateEditor__toolbarContainer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  max-width: 600px;
+  height: 100%;
+  border-right: solid 1px #eee;
+  background-color: #FFF;
+  position: relative;
+}
+.emailTemplateEditor__segmentList {
+  list-style-type: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 30px auto;
+  background-color: #FFF;
+  overflow: hidden;
+}
+.emailTemplateEditor__segmentListItem {
+  margin: 0;
+  padding: 0;
+  display: block;
+  line-height: 1;
+}
+.emailTemplateEditor__segmentContainer {
+  position: relative;
+  border: solid 0px transparent;
+  min-height: 2px;
+}
+.emailTemplateEditor__segmentContainer:hover {
+  min-height: 42px;
+}
+.draghandle:hover {
+  cursor: move;
+}
+.emailTemplateEditor__segmentHeaderContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: dotted 2px transparent;
+  z-index: 100;
+}
+.emailTemplateEditor__segmentHeaderContainer .emailTemplateEditor__segmentHeader {
+  display: none;
+}
+.emailTemplateEditor__segmentHeaderContainer:hover {
+  border: dotted 2px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+.emailTemplateEditor__segmentHeaderContainer:hover .emailTemplateEditor__segmentHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 200;
+}
+.emailTemplateEditor__segmentHeaderContainer--active {
+  border: dotted 2px rgba(0, 0, 0, 0.6);
+}
+.emailTemplateEditor__segmentHeader {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #FFF;
+  padding: 0px 12px;
+  font-size: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.emailTemplateEditor__segmentHeader span {
+  display: inline-block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.emailTemplateEditor__segmentHeader span.draghandle {
+  margin-right: auto;
+}
+.emailTemplateEditor__segmentHeader a {
+  font-size: 30px;
+  color: #FFF;
+  padding: 0 0 0 24px;
+}
+.emailTemplateEditor__segmentHeader a:hover {
+  color: #EEE;
+}
+.segmentToolbar {
+  padding: 1em 1.5em;
+}
+.emailTemplateEditor__navigation {
+  width: 100%;
+  padding: 0;
+}
+.emailTemplateEditor__segmentEditorContainer {
+  height: 100%;
+  position: relative;
+}
+.emailTemplateEditor__emptySegmentList {
+  text-align: center;
+  padding: 30px 30px;
+  border: dotted 2px rgba(0, 0, 0, 0.6);
+}
+.templateSegment__container {
+  height: 100%;
+  position: relative;
+}
+.emailTemplateEditor__segmentList {
+  font-size: 17px;
+  background-color: #FFFFFF;
+  color: #3D3D3D;
+}
+.emailTemplate_richText {
+  line-height: 1.75;
+  font-size: 17px;
+  font-weight: normal;
+  color: #3d3d3d;
+  font-family: 'Arial';
+}
+.emailTemplate_richText h1,
+.emailTemplate_richText h2,
+.emailTemplate_richText h3,
+.emailTemplate_richText h4,
+.emailTemplate_richText h5,
+.emailTemplate_richText h6 {
+  margin: 0 0 0.5em 0;
+  padding: 0;
+  font-weight: bold;
+  line-height: 1.25;
+}
+.emailTemplate_richText h1 {
+  font-size: 36px;
+}
+.emailTemplate_richText h2 {
+  font-size: 30px;
+}
+.emailTemplate_richText h3 {
+  font-size: 24px;
+}
+.emailTemplate_richText h4 {
+  font-size: 18px;
+}
+.emailTemplate_richText h5 {
+  font-size: 14px;
+}
+.emailTemplate_richText h6 {
+  font-size: 12px;
+}
+.emailTemplate_richText p {
+  line-height: 1.75;
+  margin: 0 0 1em 0;
+}
