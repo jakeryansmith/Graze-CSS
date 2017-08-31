@@ -37,6 +37,42 @@ ul.list-spacing-lg > li {margin-bottom: @spacing-large;}
   }
 }
 
+.draggable-list {
+  > li {
+    display: block;
+    width: 100%;
+    margin-bottom: @spacing-medium;
+    .br-sm();
+    background-color: @gray-lighter;
+    border: solid 1px @gray-light;
+    .shadow-soft();
+    padding: @spacing-medium-small @spacing-small;
+  }
+  .sortable-chosen {
+    .shadow();
+  }
+  .sortable-ghost {
+    .shadow();
+  }
+  .draghandle {
+    cursor: move;
+    display: inline-block;
+    padding-left: @spacing-extra-small;
+    padding-right: @spacing-extra-small;
+    color: @gray-medium;
+    &:hover {
+      color: @gray;
+    }
+    &:before {
+      content: "\f142 \f142";
+    }
+  }
+}
+
+.pop {
+  animation: pop 0.2s ease-out 1;
+}
+
 @media (max-width: 800px) {
   .settings-list {
     > li {
