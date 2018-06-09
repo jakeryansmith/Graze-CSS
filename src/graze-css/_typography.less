@@ -34,33 +34,39 @@ small,
 .text-justify        { text-align: justify; }
 .text-nowrap         { white-space: nowrap; }
 
-.text-gray-dark {color: @gray-dark;}
-.text-gray {color: @gray;}
-.text-gray-medium {color: @gray-medium;}
-.text-gray-light, .text-muted {color: @gray-light;}
-.text-gray-lighter {color: @gray-lighter;}
-
-.text-primary {color: @primary;}
-.text-primary-light {color: @primary-light;}
-.text-success {color: @primary;}
-
-.text-warning, .text-danger {color: @warning;}
-
 // Line Height
 .lh-1 {
-  line-height: 1rem;
+  line-height: 1;
 }
 
 .lh-2 {
-  line-height: 1.25rem;
+  line-height: 1.25;
 }
 
 .lh-3 {
-  line-height: 1.5rem;
+  line-height: 1.5;
+}
+
+.lh-4 {
+  line-height: 1.75;
 }
 
 .lh-5 {
-  line-height: 2rem;
+  line-height: 2;
 }
 
-.bold {font-weight: bolder;}
+.light {font-weight: lighter !important;}
+.bold {font-weight: bolder !important;}
+.normal {font-weight: normal !important;}
+
+.numberBullet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+
