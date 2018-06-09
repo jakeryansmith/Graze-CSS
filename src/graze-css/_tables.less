@@ -22,7 +22,7 @@ th {
       > th, > td {
         padding: @spacing-small;
         vertical-align: middle;
-        border-top: 1px solid @table-border-color;
+        border-bottom: 1px solid @table-border-color;
       }
     }
   }
@@ -33,6 +33,9 @@ th {
     background-color: #FFF;
   }
   // Remove top border from thead by default
+  > tbody > tr:first-of-type > td {
+    border-top: 0px solid @table-border-color;
+  }
   > caption + thead,
   > colgroup + thead,
   > thead:first-child {
@@ -49,19 +52,21 @@ th {
   }
 }
 
+.panel-body .table tr:last-of-type td {
+  border-bottom: none;
+}
+
 .table-full {
   > thead,
   > tbody,
   > tfoot {
     > tr {
       > th, > td {
-        padding: @spacing-small @spacing-medium !important;
-        // border-right: solid 1px @gray-light;
-        // &:last-of-type {border-right: none;}
+        padding: @spacing-medium @spacing-medium;
       }
     }
   }
-  > thead > tr > th {padding: @spacing-medium @spacing-medium !important;}
+  > thead > tr > th {padding: @spacing-medium @spacing-medium;}
 }
 
 // Zebra-striping
@@ -76,7 +81,7 @@ th {
 
 .table-hover {
   tbody > tr:hover {
-    background-color: @table-hightlight-color !important;
+    background-color: @table-hightlight-color;
   }
 }
 
@@ -106,12 +111,64 @@ th {
   }
 }
 
+.table-bordered {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th, > td {
+        border: 1px solid @table-border-color !important;
+      }
+    }
+  }
+}
+
+.table-comparison {
+  table-layout: fixed;
+  > thead > tr > th {
+    background-color: @gray-lighter;
+  }
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th {
+        vertical-align: top;
+      }
+      > th, > td {
+        width: 24%;
+        text-align: center !important;
+        padding: @spacing-medium;
+        &:first-of-type {
+          width: 28%;
+          text-align: left !important;
+          color: @gray-medium;
+        }
+      }
+    }
+    > tr.header {
+      > td {
+        background-color: @gray-lighter;
+        border-right: none;
+        font-weight: bolder;
+        color: @gray;
+        font-size: @font-size-1;
+        &:last-of-type {
+          border-right: 1px solid @table-border-color;
+        }
+      }
+    }
+  }
+}
+
 .table-responsive {
   display: block;
   width: 100%;
   max-width: 100%;
-  overflow-x: auto;
+  overflow-y: visible;
   -ms-overflow-style: -ms-autohiding-scrollbar !important;
+  -webkit-overflow-scrolling: touch;
+  z-index: 99;
 }
 
 // Settings table
@@ -140,7 +197,22 @@ th {
   }
 }
 
+.visible-table-row {display: none;}
+.hidden-table-row {display: table-row;}
+
+.visible-table-cell {display: none;}
+.hidden-table-cell {display: table-cell;}
+
+.visible-table-block {display: none;}
+
 @media screen and (max-width: @mobile-table-break) {
+  .visible-table-row {display: table-row;}
+  .hidden-table-row {display: none;}
+
+  .visible-table-cell {display: table-cell;}
+  .hidden-table-cell {display: none !important;}
+
+  .visible-table-block {display: block;}
   .table-settings > tbody > tr > td {
     width: 100%;
     display: block;
@@ -212,6 +284,46 @@ th {
       content: attr(data-label)":";
     }
   }
+
+  .table-comparison {
+    table-layout: auto;
+  }
+
+  .table-comparison.first {
+    thead > tr > th:nth-child(1), th:nth-child(3), th:nth-child(4), th:nth-child(5) {
+      display: none;
+    }
+    tbody > tr > td:nth-child(3), td:nth-child(4), td:nth-child(5) {
+      display: none;
+    }
+  }
+
+  .table-comparison.second {
+    thead > tr > th:nth-child(1), th:nth-child(2), th:nth-child(4), th:nth-child(5) {
+      display: none;
+    }
+    tbody > tr > td:nth-child(2), td:nth-child(4), td:nth-child(5) {
+      display: none;
+    }
+  }
+
+  .table-comparison.third {
+    thead > tr > th:nth-child(1), th:nth-child(2), th:nth-child(3), th:nth-child(5) {
+      display: none;
+    }
+    tbody > tr > td:nth-child(2), td:nth-child(3), td:nth-child(5) {
+      display: none;
+    }
+  }
+
+  .table-comparison.fourth {
+    thead > tr > th:nth-child(1), th:nth-child(2), th:nth-child(3), th:nth-child(4) {
+      display: none;
+    }
+    tbody > tr > td:nth-child(2), td:nth-child(3), td:nth-child(4) {
+      display: none;
+    }
+  }
 }
 
 @media print {
@@ -253,4 +365,18 @@ th {
 
 .tableSorter {
   white-space: nowrap;
+}
+
+// Grid Table
+.table-grid {
+  width: 100%;
+  display: grid;
+  grid-auto-columns: minmax(100px, 1fr);
+  grid-auto-flow: column;
+  align-items: center;
+  > div {
+    font-size: @font-size-normal;
+    padding: @spacing-medium;
+    vertical-align: middle;
+  }
 }
