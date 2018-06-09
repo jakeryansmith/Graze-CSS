@@ -6,6 +6,10 @@ ul.list-spacing-md > li {margin-bottom: @spacing-medium;}
 
 ul.list-spacing-lg > li {margin-bottom: @spacing-large;}
 
+ul.list-spacing-xl > li {margin-bottom: @spacing-extra-large;}
+
+ul.list-spacing-xxl > li {margin-bottom: @spacing-extra-extra-large;}
+
 // Settings List
 .settings-list {
   display: flex;
@@ -68,11 +72,10 @@ ul.list-spacing-lg > li {margin-bottom: @spacing-large;}
     }
   }
 }
-
-.pop {
-  animation: pop 0.2s ease-out 1;
+.list-styled {
+  list-style-type: disc;
+  margin-left: @spacing-medium;
 }
-
 @media (max-width: 800px) {
   .settings-list {
     > li {
