@@ -4,6 +4,17 @@
   100%  {transform: scale(1);}
 }
 
+@keyframes fadein {
+  0%  {opacity: 0;}
+  100%  {opacity: 1;}
+}
+
+@keyframes slide {
+  0%  {right: 0px;}
+  50%  {right: 10px;}
+  100%  {right: 0px;}
+}
+
 @keyframes showModal {
   0%    { transform: scale(0.8);  -webkit-transform: scale(0.8);  }
   100%  { transform: scale(1);    -webkit-transform: scale(1);    }
@@ -14,6 +25,10 @@
   100%  { transform: scale(0.8);  -webkit-transform: scale(0.8);  }
 }
 
+
+.fade-color {
+  transition: color ease-in-out 0.1s;
+}
 
 // Vue.js transitions
 .fade-enter-active {
