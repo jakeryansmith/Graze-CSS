@@ -1,0 +1,21 @@
+input.switch {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  position: relative;
+  height: 20px;
+  width: 40px;
+  border-radius: 10px;
+  box-shadow: inset -20px 0px 0px 1px rgba(255, 255, 255, 0.5);
+  background-color: @warning;
+  border: 1px solid @warning;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+input.switch:checked {
+  background-color: @primary-base;
+  box-shadow: inset 20px 0px 0px 1px rgba(255, 255, 255, 0.5);
+  border: 1px solid @primary-base;
+}
