@@ -24,7 +24,7 @@
 
 .panel-footer {
   padding: @spacing-medium-small @spacing-medium;
-  border-top: solid 1px @gray-lighter;
+  border-top: solid 1px @gray-light;
 }
 
 .panel-heading {
@@ -95,6 +95,18 @@
 	}
 }
 
+// Modal panels
+.gc-modal-body .panel, .panel-body .panel {
+  .shadow-soft();
+  background-color: @gray-lighter;
+  border: solid 1px @gray-light;
+}
+
+.gc-modal-body .panel-heading, .panel-body .panel {
+  font-size: @font-size-normal;
+  padding: @spacing-small @spacing-medium;
+}
+
 // Dashboard
 .dashboard-panel {
   min-height: 500px;
@@ -117,19 +129,36 @@
   padding: @spacing-medium;
 }
 
+.settingsPanel__header {
+  height: @spacing-extra-large;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: solid 1px @gray-light;
+  overflow: hidden;
+  background-color: #FFF;
+  padding: 0 @spacing-medium;
+}
+
 .settingsPanel__body {
   width: 100%;
   position: absolute;
   top: 0;
-  bottom: 64px;
+  bottom: @spacing-extra-large;
   left: 0;
   right: 0;
   overflow: auto;
   padding: @spacing-medium;
 }
 
+.settingsPanel__header + .settingsPanel__body {
+  top: @spacing-extra-large;
+}
+
 .settingsPanel__footer {
-  height: 64px;
+  height: @spacing-extra-large;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -139,4 +168,24 @@
   overflow: hidden;
   background-color: #FFF;
   padding: 0 @spacing-medium;
+}
+
+.panel-open {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.panel-open::after {
+  content: '';
+  position: fixed;
+  z-index: @zindex-modal - 11;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(165, 1%, 1%, 0.7);
+  opacity: 1;
+  animation: fadein 0.2s ease-in-out 1;
 }
