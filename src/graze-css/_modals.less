@@ -16,6 +16,7 @@
 	overflow: auto;
 	z-index: @zindex-modal + 1;
   padding: @spacing-small;
+  -webkit-overflow-scrolling: touch;
 }
 
 .gc-modal-container {
@@ -27,6 +28,10 @@
   	transition: all .1s ease;
     opacity: .5;
   	max-width: 600px;
+}
+
+.gc-modal-container--md {
+  max-width: 800px;
 }
 
 .gc-modal-container--large {
@@ -62,6 +67,7 @@
   line-height: 1.25rem;
 	font-size: @font-size-normal;
 	padding: @spacing-large @spacing-medium-small @spacing-medium-small @spacing-medium-small;
+  .light();
 }
 
 .gc-modal-footer {
@@ -91,6 +97,7 @@
   height: 100vh;
   width: 100vw;
 }
+
 
 // Depricated Modal
 
