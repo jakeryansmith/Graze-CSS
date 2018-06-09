@@ -1,4 +1,184 @@
+/* Primary Color */
 /* GrazeCart Green */
+/* GrazeCart Green */
+/* Gray */
+/* Color helpers */
+.text-primary {
+  color: #34b292 !important;
+}
+.text-primary-1 {
+  color: #0b2821 !important;
+}
+.text-primary-2 {
+  color: #174f41 !important;
+}
+.text-primary-3 {
+  color: #227762 !important;
+}
+.text-primary-4 {
+  color: #2e9e82 !important;
+}
+.text-primary-5 {
+  color: #39c6a3 !important;
+}
+.text-primary-6 {
+  color: #61d1b5 !important;
+}
+.text-primary-7 {
+  color: #88ddc8 !important;
+}
+.text-primary-8 {
+  color: #b0e8da !important;
+}
+.text-primary-9 {
+  color: #d7f4ed !important;
+}
+.text-primary-10 {
+  color: #f7fdfb !important;
+}
+.bg-primary {
+  background-color: #34b292 !important;
+}
+.bg-primary-1 {
+  background-color: #0b2821 !important;
+}
+.bg-primary-2 {
+  background-color: #174f41 !important;
+}
+.bg-primary-3 {
+  background-color: #227762 !important;
+}
+.bg-primary-4 {
+  background-color: #2e9e82 !important;
+}
+.bg-primary-5 {
+  background-color: #39c6a3 !important;
+}
+.bg-primary-6 {
+  background-color: #61d1b5 !important;
+}
+.bg-primary-7 {
+  background-color: #88ddc8 !important;
+}
+.bg-primary-8 {
+  background-color: #b0e8da !important;
+}
+.bg-primary-9 {
+  background-color: #d7f4ed !important;
+}
+.bg-primary-10 {
+  background-color: #f7fdfb !important;
+}
+.text-gray-1 {
+  color: #191a1a !important;
+}
+.text-gray-2 {
+  color: #313534 !important;
+}
+.text-gray-3 {
+  color: #4a4f4e !important;
+}
+.text-gray-4 {
+  color: #636968 !important;
+}
+.text-gray-5 {
+  color: #7c8381 !important;
+}
+.text-gray-6 {
+  color: #969c9b !important;
+}
+.text-gray-7 {
+  color: #b0b5b4 !important;
+}
+.text-gray-8 {
+  color: #cacecd !important;
+}
+.text-gray-9 {
+  color: #e5e6e6 !important;
+}
+.text-gray-10 {
+  color: #fcfdfc !important;
+}
+.bg-gray-1 {
+  background-color: #191a1a !important;
+}
+.bg-gray-2 {
+  background-color: #313534 !important;
+}
+.bg-gray-3 {
+  background-color: #4a4f4e !important;
+}
+.bg-gray-4 {
+  background-color: #636968 !important;
+}
+.bg-gray-5 {
+  background-color: #7c8381 !important;
+}
+.bg-gray-6 {
+  background-color: #969c9b !important;
+}
+.bg-gray-7 {
+  background-color: #b0b5b4 !important;
+}
+.bg-gray-8 {
+  background-color: #cacecd !important;
+}
+.bg-gray-9 {
+  background-color: #e5e6e6 !important;
+}
+.bg-gray-10 {
+  background-color: #fcfdfc !important;
+}
+.text-gray-dark {
+  color: #313534;
+}
+.text-gray {
+  color: #636968;
+}
+.text-gray-medium {
+  color: #7c8381 !important;
+}
+.text-gray-light,
+.text-muted {
+  color: #e5e6e6 !important;
+}
+.text-gray-lighter {
+  color: #fcfdfc;
+}
+.text-primary {
+  color: #34b292;
+}
+.text-primary-light {
+  color: #42d7b2;
+}
+.text-success {
+  color: #34b292;
+}
+.text-warning,
+.text-danger {
+  color: #df6868;
+}
+.bg-backgound-color {
+  background-color: #f5f8f9;
+}
+.bg-white {
+  background-color: #FFF;
+}
+.bg-gray-dark {
+  background-color: #313534;
+}
+.bg-gray {
+  background-color: #636968;
+}
+.bg-gray-light {
+  background-color: #e5e6e6;
+}
+.bg-gray-lighter {
+  background-color: #fcfdfc;
+}
+.bg-gray-lighter-hover:hover {
+  background-color: #fcfdfc;
+}
 /* Font Sizes */
 .emailTemplateEditor {
   height: 100%;
@@ -138,7 +318,35 @@
 }
 .emailTemplateEditor__navigation {
   width: 100%;
-  padding: 0;
+  padding: 0px;
+}
+.emailTemplateEditor__blocksContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  margin-top: 1rem;
+}
+.emailTemplateEditor__blocksContainer i {
+  display: block;
+  margin-bottom: 0.25em;
+  font-size: 2rem !important;
+}
+.emailTemplateEditor__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100px;
+  width: 100px;
+  width: 100%;
+  text-align: center;
+  border: solid 1px #e5e6e6;
+  background-color: #fcfdfc;
 }
 .emailTemplateEditor__segmentEditorContainer {
   height: 100%;

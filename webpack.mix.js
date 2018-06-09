@@ -3,8 +3,9 @@ let mix = require('laravel-mix');
 
 // Mix Graze CSS framework
 mix.less('src/graze-css/graze-css.less', 'dist/');
-mix.copy('dist/graze-css.css', '/Users/jakeryansmith/Code/grazecart/public/css/graze.css');
+mix.copy('dist/graze-css.css', '/Users/jakeryansmith/Code/grazecart/resources/assets/css/graze.css');
 mix.copy('dist/graze-css.css', '/Users/jakeryansmith/Code/gcmarketing/public/css/graze.css');
+mix.copy('dist/graze-css.css', '/Users/jakeryansmith/Code/grazesupport/resources/css/graze.css');
 
 // Mix Theme Editor
 mix.less('src/theme-editor/theme-editor.less', 'dist/');

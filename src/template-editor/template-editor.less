@@ -140,7 +140,31 @@
 
 .emailTemplateEditor__navigation {
 	width: 100%;
-	padding: 0;
+	padding: 0px;
+}
+
+.emailTemplateEditor__blocksContainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 1rem;
+	margin-top: 1rem;
+	i {
+		display: block;
+		margin-bottom: 0.25em;
+		font-size: 2rem !important;
+	}
+}
+
+.emailTemplateEditor__block {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+	width: 100px;
+	width: 100%;
+	text-align: center;
+	border: solid 1px @gray-9;
+	background-color: @gray-10;
 }
 
 .emailTemplateEditor__segmentEditorContainer {
