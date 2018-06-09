@@ -38,6 +38,19 @@
 	}
 }
 
+@media (max-width: @mobile-navigation-break) {
+	.nav {
+		flex-wrap: nowrap;
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+		> li {
+			flex: 0 0 auto;
+			margin-bottom: 0px;
+
+		}
+	}
+}	
+
 // Tab list
 .tabsList {
 	list-style: none;
