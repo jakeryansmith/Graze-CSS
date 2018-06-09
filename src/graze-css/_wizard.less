@@ -1,0 +1,38 @@
+.wizard__container {
+	margin: 0 @spacing-medium;
+	padding: 0  0 @spacing-large 0;
+	border-bottom: solid 1px @gray-9;
+}
+
+.wizard__innerContainer {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-gap: 3rem;
+	width: 100%;
+	align-items: center;
+}
+
+.wizzard__instructionsContainer {
+	min-width: 400px;
+}
+
+.wizard__controlsContainer {
+	background-color: #FFF;
+	padding: @spacing-medium;
+	.shadow();
+}
+
+@media (max-width: @mobile-navigation-break) {
+	.wizard__innerContainer {
+		display: block;
+	}
+
+	.wizzard__instructionsContainer {
+		min-width: 100%;
+	}
+
+	.wizard__controlsContainer {
+		min-width: 100%;
+		max-width: 100%;
+	}
+}
